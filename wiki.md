@@ -69,16 +69,15 @@
 python3 visualizer/app.py
 ```
 
-then start building a software by ``python3 run.py`` and go to [Visualizer Website](http://127.0.0.1:8000/) to see an real-time visualized version of logs such as
+then start building a software by ``python3 run.py`` and go to [Your local instance of ChatChain Visualizer Website (localhost:8000/)](http://localhost:8000/) to see an real-time visualized version of logs such as
 
 ![demo](misc/demo.png)
 
-- You can also go to the [ChatChain Visualizer](http://127.0.0.1:8000/static/chain_visualizer.html) on this page and
-  upload any ``ChatChainConfig.json`` under ``CompanyConfig/`` to get a visualization on this chain, such as:
+- You can also upload any ``ChatChainConfig.json`` under ``CompanyConfig/`` to get a visualization on this chain, such as:
 
 ![ChatChain Visualizer](misc/chatchain_vis.png)
 
-- You can also go to the [Chat Replay page](http://127.0.0.1:8000/static/replay.html) to replay the log file in the software folder
+- You can also go to the [Chat Replay page (localhost:8000/static/replay.html)](http://localhost:8000/static/replay.html) to replay the log file in the software folder
     - click the ``File Upload`` bottom to upload a log, then click ``Replay``
     - The replay only shows the dialogues in natural languages between agents, it will not contain debug logs.
 
@@ -88,7 +87,7 @@ then start building a software by ``python3 run.py`` and go to [Visualizer Websi
 - You can use docker for a quick and safe use of ChatDev. You will need some extra steps to allow the execution of the GUI program in docker since ChatDev often creates software with GUI and executes it in the Test Phase.
 
 ### Install Docker
-- Please refer to the [Docker Official Website](https://www.docker.com/get-started/) for installing Docker.
+- Please refer to your OS (e.g., linux distribution) instructions, and failing that, the [Docker Official Website](https://www.docker.com/get-started/) for installing Docker.
 
 ### Prepare GUI connection between Host and Docker
 - Take macOS for example,
@@ -173,7 +172,8 @@ After this process, the experiences have been extracted from the production of s
   ```bash
     python3 ecl/post_process/memory_filter.py 0.9 "ecl/memory/MemoryCards.json" "ecl/memory/MemoryCards_filtered.json"
   ```
-> **Notice:** By default, the `MemoryCards.json` is set to be empty. You can customize your own experience pool for agents following steps above. And we have also provided our `MemoryCards.json` used in our experiment in [MemoryCards.json](https://drive.google.com/drive/folders/1czsR4swQyqpoN8zwN0-rSFcTVl68zTDY?usp=sharing). You can download the json file through the link and put it under `ecl/memory` folder. This allows you to directly proceed to the Co-Reasoning phase without needing to redo the Co-Tracking and Co-Memorizing steps.
+> **Notice:** By default, the `MemoryCards.json` is set to be empty. You can customize your own experience pool for agents following steps above. he provided (ecl/memory/MemoryCards.example.json)[MemoryCards.json](ecl/memory/MemoryCards.json.example) file (NOTE: `git lfs` is required to download this correctly) can be copied to `ecl/memory/MemoryCards.json`. This allows you to directly proceed to the Co-Reasoning phase without needing to redo the Co-Tracking and Co-Memorizing steps.
+
 ### Co-Reasoning
 - **Memory Usage Configuration**:
   In the `CompanyConfig/Default/ChatChainConfig.json` file, the `with_memory` option should be set **True**. \
@@ -216,7 +216,7 @@ Detailed descriptions and experiment results about this Experiential Co-Evolving
 
 ![arch](misc/arch.png)
 
-- All the configuration content related to ChatDev (such as the background prompt of the agent employee, the work content of each Phase, and how the Phase is combined into a ChatChain), are called a **CompanyConfig** (because ChatDev is like a virtual software company). These CompanyConfigs are in the ChatDev project Under ``CompanyConfig/``. You can check this [directory](https://github.com/OpenBMB/ChatDev/tree/main/CompanyConfig). In this directory, you will see different CompanyConfig (such as Default, Art, Human). Generally speaking, each CompanyConfig will contain 3 configuration files.
+- All the configuration content related to ChatDev (such as the background prompt of the agent employee, the work content of each Phase, and how the Phase is combined into a ChatChain), are called a **CompanyConfig** (because ChatDev is like a virtual software company). These CompanyConfigs are in the ChatDev project Under ``CompanyConfig/``. You can check the CompanyConfig directory. In this directory, you will see different CompanyConfig (such as Default, Art, Human). Generally speaking, each CompanyConfig will contain 3 configuration files.
   1. ChatChainConfig.json, which controls the overall development process of ChatDev, including which Phase each step is, how many times each Phase needs to be cycled, whether reflection is needed, etc.
   2. PhaseConfig.json, which controls each Phase, and corresponds to ``chatdev/phase.py`` or ``chatdev/composed_phase.py`` in the ChatDev project. The Python file realizes the specific working logic of each phase. The JSON file here contains the configuration of each phase, such as the background prompt, which employees are participating in the phase, etc.
   3. RoleConfig.json contains the configuration of each employee (agent). Currently, it only contains the background prompt of each employee, which is a bunch of text containing placeholders.
@@ -315,8 +315,8 @@ Detailed descriptions and experiment results about this Experiential Co-Evolving
           ]
         }
       ```
-        - You also need to implement your own ComposePhase class, which you need to decide the phase_env update and
-          chat_env update (the same as SimplePhase, but for the whole ComposePhase) and the condition for stopping the
+        - You also need to implement your own ComposePhase class, which you need to decide the `phase_env` update and
+          `chat_env` update (the same as SimplePhase, but for the whole ComposePhase) and the condition for stopping the
           loop (optional):
       ```python
       class Test(ComposedPhase):
@@ -355,12 +355,12 @@ Detailed descriptions and experiment results about this Experiential Co-Evolving
 - *background_prompt*: background prompt that will be added to every inquiry to LLM
 - *with_memory*: Whether to utilize the experience pool for agents. The experience pool actually lies in in `ecl/memory/MemoryCards.json`.
 - params in SimplePhase:
-    - *max_turn_step*: Max number of chatting turn. You can increase max_turn_step for better performance but it will
+    - *`max_turn_step`*: Max number of chatting turn. You can increase `max_turn_step` for better performance but it will
       take a longer time to finish the phase.
-    - *need_reflect*: Flag for reflection. Reflection is a special phase that automatically executes after a phase. It
+    - *`need_reflect`*: Flag for reflection. Reflection is a special phase that automatically executes after a phase. It
       will start a chat between the counselor and CEO to refine the conclusion of phase chatting.
 - params in ComposedPhase
-    - *cycleNum*: Number of cycles to execute SimplePhase in this ComposedPhase.
+    - *`cycleNum`*: Number of cycles to execute SimplePhase in this ComposedPhase.
 
 ## Project Structure
 
