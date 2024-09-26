@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-    【<a href="wiki.md">Wiki</a> | <a href="wiki.md#visualizer">Visualizer</a> | <a href="Contribution.md">Community Built Software</a> | <a href="wiki.md#customization">Customization</a> | <a href="https://discord.gg/bn4t2Jy6TT")>Discord</a>】
+    【<a href="wiki.md">Wiki</a> | <a href="wiki.md#visualizer">Visualizer</a> | <a href="wiki.md#customization">Customization</a> | <a href="https://discord.gg/bn4t2Jy6TT")>Discord</a>】
 
 </p>
 
