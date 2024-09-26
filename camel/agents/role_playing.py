@@ -12,7 +12,11 @@
 # limitations under the License.
 # =========== Copyright 2023 @ CAMEL-AI.org. All Rights Reserved. ===========
 import copy
+import time
 from typing import Dict, List, Optional, Sequence, Tuple
+
+import tenacity
+import openai
 
 from camel.agents import (
     ChatAgent,
@@ -244,7 +248,15 @@ class RolePlaying:
 
         # print("assistant...")
         user_msg_rst = user_msg.set_user_role_at_backend()
-        assistant_response = self.assistant_agent.step(user_msg_rst)
+
+        for i in range(1,100):
+            try:
+                assistant_response = self.assistant_agent.step(user_msg_rst)
+                break
+            except (tenacity.RetryError, openai.APITimeoutError):
+                time.sleep(2)
+                continue
+
         if assistant_response.terminated or assistant_response.msgs is None:
             return (
                 ChatAgentResponse([assistant_response.msgs], assistant_response.terminated, assistant_response.info),

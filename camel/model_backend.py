@@ -13,9 +13,11 @@
 # =========== Copyright 2023 @ CAMEL-AI.org. All Rights Reserved. ===========
 from abc import ABC, abstractmethod
 from typing import Any, Dict
+import time
 
 import openai
 import tiktoken
+import tenacity
 
 from camel.typing import ModelType
 from chatdev.statistics import prompt_cost
@@ -98,8 +100,14 @@ class OpenAIModel(ModelBackend):
             num_max_completion_tokens = num_max_token - num_prompt_tokens
             self.model_config_dict['max_tokens'] = num_max_completion_tokens
 
-            response = client.chat.completions.create(*args, **kwargs, model=self.model_type.value,
-                                                      **self.model_config_dict)
+            for i in range(1, 100):
+                try:
+                    response = client.chat.completions.create(*args, **kwargs, model=self.model_type.value,
+                                                              **self.model_config_dict, request_timeout=999, timeout=999)
+                    break
+                except (tenacity.RetryError, openai.APITimeoutError):
+                    time.sleep(2)
+                    continue
 
             cost = prompt_cost(
                 self.model_type.value,

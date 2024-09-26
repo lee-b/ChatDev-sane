@@ -54,18 +54,21 @@ class ChatAgentResponse:
     terminated: bool
     info: Dict[str, Any]
 
-    @property
-    def msg(self):
+    def __post_init__(self):
         if self.terminated:
             raise RuntimeError("error in ChatAgentResponse, info:{}".format(str(self.info)))
+
         if len(self.msgs) > 1:
             raise RuntimeError("Property msg is only available for a single message in msgs")
-        elif len(self.msgs) == 0:
+
+        if len(self.msgs) == 0:
             if len(self.info) > 0:
                 raise RuntimeError("Empty msgs in ChatAgentResponse, info:{}".format(str(self.info)))
             else:
-                # raise RuntimeError("Known issue that msgs is empty and there is no error info, to be fix")
-                return None
+                raise RuntimeError("Known issue that msgs is empty and there is no error info, to be fix")
+
+    @property
+    def msg(self):
         return self.msgs[0]
 
 
