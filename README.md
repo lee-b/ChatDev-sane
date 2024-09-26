@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-    【📚 <a href="wiki.md">Wiki</a> | 🚀 <a href="wiki.md#visualizer">Visualizer</a> | 👥 <a href="Contribution.md">Community Built Software</a> | 🔧 <a href="wiki.md#customization">Customization</a> | 👾 <a href="https://discord.gg/bn4t2Jy6TT")>Discord</a>】
+    【<a href="wiki.md">Wiki</a> | <a href="wiki.md#visualizer">Visualizer</a> | <a href="Contribution.md">Community Built Software</a> | <a href="wiki.md#customization">Customization</a> | <a href="https://discord.gg/bn4t2Jy6TT")>Discord</a>】
 
 </p>
 
@@ -81,15 +81,15 @@
 - June 30, 2023: The initial version of the ChatDev repository was released.
 </details>
 
-## ❓ What Can ChatDev Do?
+## What Can ChatDev Do?
 
 ![intro](misc/intro.png)
 
-<https://github.com/OpenBMB/ChatDev/assets/11889052/80d01d2f-677b-4399-ad8b-f7af9bb62b72>
+<./assets/11889052/80d01d2f-677b-4399-ad8b-f7af9bb62b72>
 
-## ⚡️ Quickstart
+## Quickstart
 
-### 🖥️ Quickstart with terminal
+### Quickstart with terminal
 
 To get started, follow these steps:
 
@@ -162,11 +162,11 @@ To get started, follow these steps:
    python main.py
    ```
 
-### 🐳 Quickstart with Docker
+### Quickstart with Docker
 
-- Thanks to [ManindraDeMel](https://github.com/ManindraDeMel) for providing Docker support. Please see [Docker Start Guide](wiki.md#docker-start).
+- See [Docker Start Guide](wiki.md#docker-start).
 
-## ✨️ Advanced Skills
+## Advanced Skills
 
 For more detailed information, please refer to the [Wiki](wiki.md), where you can find:
 
@@ -180,7 +180,7 @@ For more detailed information, please refer to the [Wiki](wiki.md), where you ca
   - Phase: Design your own phase within ChatChain, like ``DemandAnalysis``.
   - Role: Defining the various agents in your company, such as the ``Chief Executive Officer``.
 
-## 🤗 Share Your Software
+## Share Your Software
 
 **Code**: Contributions are very welcome. If you encounter any problems, don't hesitate to report them. Feel free to
 create a pull request if you have any inquiries or if you are prepared to share your work with us! Your contributions
@@ -203,15 +203,11 @@ create a software package and generate a folder named ``/WareHouse/2048_THUNLP_t
 
 **See community contributed software [here](Contribution.md)!**
 
-## 👨‍💻‍ Contributors
+## Contributors
 
-<a href="https://github.com/OpenBMB/ChatDev/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=OpenBMB/ChatDev" />
-</a>
+See git blame for details.
 
-Made with [contrib.rocks](https://contrib.rocks).
-
-## 🔎 Citation
+## Citation
 
 ```
 @article{chatdev,
@@ -223,21 +219,12 @@ Made with [contrib.rocks](https://contrib.rocks).
 }
 ```
 
-## ⚖️ License
+## License
 
 - Source Code Licensing: This project's source code is licensed under the Apache 2.0 License. This license permits the use, modification, and distribution of the code, subject to certain conditions. See the full text of the license for further details.
 - Data Licensing: The related data utilized in our project is licensed under CC BY-NC 4.0. This license explicitly permits non-commercial use of the data.  Per law, usage of the data to train models is fine in most countries, but check your local laws.
 
-
-## 🤝 Acknowledgments
-
-nlp.csai.tsinghua.edu.cn <img src="misc/thunlp.png" height=50pt></a>&nbsp;&nbsp;
-https://modelbest.cn <img src="misc/modelbest.png" height=50pt></a>&nbsp;&nbsp;
-<a href="https://github.com/OpenBMB/AgentVerse/"><img src="misc/agentverse.png" height=50pt></a>&nbsp;&nbsp;
-<a href="https://github.com/OpenBMB/RepoAgent"><img src="misc/repoagent.png"  height=50pt></a>
-<a href="https://app.commanddash.io/agent?github=https://github.com/OpenBMB/ChatDev"><img src="misc/CommandDash.png" height=50pt></a>
-
-## 📬 Contact
+## Contact
 
 If you have any questions, feedback, or would like to get in touch, please feel free to reach out via a github issue.
 
