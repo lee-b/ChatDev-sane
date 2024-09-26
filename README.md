@@ -222,7 +222,7 @@ See git blame for details.
 ## License
 
 - Source Code Licensing: This project's source code is licensed under the Apache 2.0 License. This license permits the use, modification, and distribution of the code, subject to certain conditions. See the full text of the license for further details.
-- Data Licensing: The related data utilized in our project is licensed under CC BY-NC 4.0. This license explicitly permits non-commercial use of the data.  Per law, usage of the data to train models is fine in most countries, but check your local laws.
+- Data Licensing: Some (not clearly identified) data claimed to be licensed under CC BY-NC 4.0. This license explicitly permits non-commercial use of the data.  Per law, usage of any such data can be used to train models, in most countries, but check your local laws.
 
 ## Contact
 
