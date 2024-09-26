@@ -28,7 +28,7 @@
   <p align="center">
   <img src='./misc/ebook.png' width=800>
   </p>
-* June 12, 2024: We introduce Multi-Agent Collaboration Networks (MacNet) 🎉, which utilize directed acyclic graphs to facilitate effective task-oriented collaboration among agents through linguistic interactions 🤖🤖. MacNet supports cooperation across various topologies and among more than a thousand agents without exceeding context limits. More versatile and scalable, MacNet can be considered a more advanced version of ChatDev's chain-shaped topology. Our preprint paper is available at [https://arxiv.org/abs/2406.07155](https://arxiv.org/abs/2406.07155). This technique will soon be incorporated into this repository, enhancing support for diverse organizational structures and offering richer solutions beyond software development (e.g., logical reasoning, data analysis, story generation, and more).
+* June 12, 2024: Introduced Multi-Agent Collaboration Networks (MacNet) 🎉, which utilize directed acyclic graphs to facilitate effective task-oriented collaboration among agents through linguistic interactions 🤖🤖. MacNet supports cooperation across various topologies and among more than a thousand agents without exceeding context limits. More versatile and scalable, MacNet can be considered a more advanced version of ChatDev's chain-shaped topology. Our preprint paper is available at [https://arxiv.org/abs/2406.07155](https://arxiv.org/abs/2406.07155). This technique will soon be incorporated into this repository, enhancing support for diverse organizational structures and offering richer solutions beyond software development (e.g., logical reasoning, data analysis, story generation, and more).
   <p align="center">
   <img src='./misc/macnet.png' width=500>
   </p>
@@ -36,19 +36,19 @@
 <details>
 <summary>Old News</summary>
 
-* May 07, 2024, we introduced "Iterative Experience Refinement" (IER), a novel method where instructor and assistant agents enhance shortcut-oriented experiences to efficiently adapt to new tasks. This approach encompasses experience acquisition, utilization, propagation, and elimination across a series of tasks. Our preprint paper is available at https://arxiv.org/abs/2405.04219, and this technique will soon be incorporated into ChatDev.
+* May 07, 2024, introduced "Iterative Experience Refinement" (IER), a novel method where instructor and assistant agents enhance shortcut-oriented experiences to efficiently adapt to new tasks. This approach encompasses experience acquisition, utilization, propagation, and elimination across a series of tasks. Our preprint paper is available at https://arxiv.org/abs/2405.04219, and this technique will soon be incorporated into ChatDev.
   <p align="center">
   <img src='./misc/ier.png' width=220>
   </p>
 
-* January 25, 2024: We have integrated Experiential Co-Learning Module into ChatDev. Please see the [Experiential Co-Learning Guide](wiki.md#co-tracking).
+* January 25, 2024: Integrated Experiential Co-Learning Module into ChatDev. Please see the [Experiential Co-Learning Guide](wiki.md#co-tracking).
 
-* December 28, 2023: We present Experiential Co-Learning, an innovative approach where instructor and assistant agents accumulate shortcut-oriented experiences to effectively solve new tasks, reducing repetitive errors and enhancing efficiency.  Check out our preprint paper at https://arxiv.org/abs/2312.17025 and this technique will soon be integrated into ChatDev.
+* December 28, 2023: Original authors presented Experiential Co-Learning, an innovative approach where instructor and assistant agents accumulate shortcut-oriented experiences to effectively solve new tasks, reducing repetitive errors and enhancing efficiency.  Check out our preprint paper at https://arxiv.org/abs/2312.17025 and this technique will soon be integrated into ChatDev.
   <p align="center">
   <img src='./misc/ecl.png' width=860>
   </p>
 
-* November 15, 2023: We launched ChatDev as a SaaS platform that enables software developers and innovative entrepreneurs to build software efficiently at a very low cost and barrier to entry. Try it out at chatdev.modelbest.cn.
+* November 15, 2023: Original authors launched ChatDev as a SaaS platform that enables software developers and innovative entrepreneurs to build software efficiently at a very low cost and barrier to entry. Try it out at chatdev.modelbest.cn.
   <p align="center">
   <img src='./misc/saas.png' width=560>
   </p>
@@ -164,11 +164,11 @@ To get started, follow these steps:
 
 ### 🐳 Quickstart with Docker
 
-- We thank [ManindraDeMel](https://github.com/ManindraDeMel) for providing Docker support. Please see [Docker Start Guide](wiki.md#docker-start).
+- Thanks to [ManindraDeMel](https://github.com/ManindraDeMel) for providing Docker support. Please see [Docker Start Guide](wiki.md#docker-start).
 
 ## ✨️ Advanced Skills
 
-For more detailed information, please refer to our [Wiki](wiki.md), where you can find:
+For more detailed information, please refer to the [Wiki](wiki.md), where you can find:
 
 - An introduction to all command run parameters.
 - A straightforward guide for setting up a local web visualizer demo, which can visualize real-time logs, replayed logs, and ChatChain.
@@ -182,14 +182,13 @@ For more detailed information, please refer to our [Wiki](wiki.md), where you ca
 
 ## 🤗 Share Your Software
 
-**Code**: We are enthusiastic about your interest in participating in our open-source project. If you come across any
-problems, don't hesitate to report them. Feel free to create a pull request if you have any inquiries or if you are
-prepared to share your work with us! Your contributions are highly valued. Please let me know if there's anything else
-you need assistance!
+**Code**: Contributions are very welcome. If you encounter any problems, don't hesitate to report them. Feel free to
+create a pull request if you have any inquiries or if you are prepared to share your work with us! Your contributions
+are highly valued. Please reach out if there's anything else you need assistance with!
 
 **Company**: Creating your own customized "ChatDev Company" is a breeze. This personalized setup involves three simple
 configuration JSON files. Check out the example provided in the ``CompanyConfig/Default`` directory. For detailed
-instructions on customization, refer to our [Wiki](wiki.md).
+instructions on customization, refer to the [Wiki](wiki.md).
 
 **Software**: Whenever you develop software using ChatDev, a corresponding folder is generated containing all the
 essential information. Sharing your work with us is as simple as making a pull request. Here's an example: execute the
@@ -226,8 +225,8 @@ Made with [contrib.rocks](https://contrib.rocks).
 
 ## ⚖️ License
 
-- Source Code Licensing: Our project's source code is licensed under the Apache 2.0 License. This license permits the use, modification, and distribution of the code, subject to certain conditions outlined in the Apache 2.0 License.
-- Data Licensing: The related data utilized in our project is licensed under CC BY-NC 4.0. This license explicitly permits non-commercial use of the data. We would like to emphasize that any models trained using these datasets should strictly adhere to the non-commercial usage restriction and should be employed exclusively for research purposes.
+- Source Code Licensing: This project's source code is licensed under the Apache 2.0 License. This license permits the use, modification, and distribution of the code, subject to certain conditions. See the full text of the license for further details.
+- Data Licensing: The related data utilized in our project is licensed under CC BY-NC 4.0. This license explicitly permits non-commercial use of the data.  Per law, usage of the data to train models is fine in most countries, but check your local laws.
 
 
 ## 🤝 Acknowledgments
@@ -240,4 +239,5 @@ https://modelbest.cn <img src="misc/modelbest.png" height=50pt></a>&nbsp;&nbsp;
 
 ## 📬 Contact
 
-If you have any questions, feedback, or would like to get in touch, please feel free to reach out to us via email at [qianc62@gmail.com](mailto:qianc62@gmail.com)
+If you have any questions, feedback, or would like to get in touch, please feel free to reach out via a github issue.
+
