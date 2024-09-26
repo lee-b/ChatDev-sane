@@ -5,9 +5,6 @@
 </p>
 
 <p align="center">
-    【English   | <a href="readme/README-Chinese.md">Chinese</a> | <a href="readme/README-Japanese.md">Japanese</a> | <a href="readme/README-Korean.md">Korean</a> | <a href="readme/README-Filipino.md">Filipino</a> | <a href="readme/README-French.md">French</a> | <a href="readme/README-Slovak.md">Slovak</a> | <a href="readme/README-Portuguese.md">Portuguese</a> | <a href="readme/README-Spanish.md">Spanish</a> | <a href="readme/README-Dutch.md">Dutch</a> | <a href="readme/README-Turkish.md">Turkish</a> | <a href="readme/README-Hindi.md">Hindi</a> | <a href="readme/README-Bahasa-Indonesia.md">Bahasa Indonesia</a> | <a href="readme/README-Russian.md">Russian</a> | <a href="readme/README-Urdu.md">Urdu</a>】
-</p>
-<p align="center">
     【📚 <a href="wiki.md">Wiki</a> | 🚀 <a href="wiki.md#visualizer">Visualizer</a> | 👥 <a href="Contribution.md">Community Built Software</a> | 🔧 <a href="wiki.md#customization">Customization</a> | 👾 <a href="https://discord.gg/bn4t2Jy6TT")>Discord</a>】
 
 </p>
@@ -51,7 +48,7 @@
   <img src='./misc/ecl.png' width=860>
   </p>
 
-* November 15, 2023: We launched ChatDev as a SaaS platform that enables software developers and innovative entrepreneurs to build software efficiently at a very low cost and barrier to entry. Try it out at https://chatdev.modelbest.cn/.
+* November 15, 2023: We launched ChatDev as a SaaS platform that enables software developers and innovative entrepreneurs to build software efficiently at a very low cost and barrier to entry. Try it out at chatdev.modelbest.cn.
   <p align="center">
   <img src='./misc/saas.png' width=560>
   </p>
@@ -91,10 +88,6 @@
 <https://github.com/OpenBMB/ChatDev/assets/11889052/80d01d2f-677b-4399-ad8b-f7af9bb62b72>
 
 ## ⚡️ Quickstart
-
-### 💻️ Quickstart with Web
-
-Access the web page for visualization and configuration use: https://chatdev.modelbest.cn/
 
 ### 🖥️ Quickstart with terminal
 
@@ -239,8 +232,8 @@ Made with [contrib.rocks](https://contrib.rocks).
 
 ## 🤝 Acknowledgments
 
-<a href="http://nlp.csai.tsinghua.edu.cn/"><img src="misc/thunlp.png" height=50pt></a>&nbsp;&nbsp;
-<a href="https://modelbest.cn/"><img src="misc/modelbest.png" height=50pt></a>&nbsp;&nbsp;
+nlp.csai.tsinghua.edu.cn <img src="misc/thunlp.png" height=50pt></a>&nbsp;&nbsp;
+https://modelbest.cn <img src="misc/modelbest.png" height=50pt></a>&nbsp;&nbsp;
 <a href="https://github.com/OpenBMB/AgentVerse/"><img src="misc/agentverse.png" height=50pt></a>&nbsp;&nbsp;
 <a href="https://github.com/OpenBMB/RepoAgent"><img src="misc/repoagent.png"  height=50pt></a>
 <a href="https://app.commanddash.io/agent?github=https://github.com/OpenBMB/ChatDev"><img src="misc/CommandDash.png" height=50pt></a>
